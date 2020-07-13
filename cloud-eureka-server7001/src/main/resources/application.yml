@@ -1,0 +1,13 @@
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: localhost
+#    hostname: eureka-server #主机名 服务端实例名称
+  client:
+     register-with-eureka: false #不把eureka注册进去 若为高可用eureka 设置为true
+     service-url:
+        defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+       #defaultZone : http://localhost:8761/eureka/ #默认端口为8761 若配置为高可用模式 直接在后面 	#加上其他地址 如 http://localhost:8760/eureka/     #Http://${eureka.instance.hostname:${server.port}/eureka/
+     fetch-registry: false #自己不注册不需要取注册表 如果需要高可用设置为true 互相在对方eureka中注册#自己
