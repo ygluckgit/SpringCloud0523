@@ -47,5 +47,13 @@ public class PaymentController {
 
         return payment != null ? new CommonResult(200, "查询成功 serverport" + serverport, payment) : new CommonResult(444, "无记录哈", null);
 
+
+
+
+    }
+    @GetMapping("/payment/getLB")
+    public String getLB(){
+        System.out.println("myLB is Success"+serverport);
+        return serverport;
     }
 }

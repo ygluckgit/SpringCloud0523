@@ -8,6 +8,7 @@ class CloudConsumerOrder80ApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }
